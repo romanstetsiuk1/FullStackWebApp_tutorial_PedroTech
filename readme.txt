@@ -21,5 +21,14 @@ Commit: "Tworzenie plikow konfiguracyjnych po stronie serwera"
       Wtedy zobaczymy nasz console.log
 
       Istnieje możliwość sprawdzenia w przeglądarce: wpisujemy localhost:{nasz_nr_portu}.
+   6. Instalujemy kolejny pakiet - nodemon. Ten pakiet pozwala robić zmiany w kodzie a wyniki podglądać w wyszukiwarce w trybie dynamicznym:
+         npm install nodemon
 
+      W package.json dopisać:
+         "scripts": {
+            "start": "nodemon index.js"
+      }
+
+   7. Żeby uruchomić aplikację trzeba wpisaćw terminalu:
+         npm start
 
