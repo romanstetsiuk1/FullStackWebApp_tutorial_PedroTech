@@ -32,3 +32,14 @@ Commit: "Tworzenie plikow konfiguracyjnych po stronie serwera"
    7. Żeby uruchomić aplikację trzeba wpisaćw terminalu:
          npm start
 
+Połączenie bazy danych z projektem:
+	1. Tworzymy bazę danych w MySQL
+
+	2. Instalujemy pakiety sequelize i sequelize-cli (instaluje lokalnie)
+   npm install sequelize sequelize-cli
+
+	3. W terminalu wpisujemy (dla uruchomienia lokalnego):
+   npx sequelize init
+
+   4. Możemy usunąć foldery 'migrations' i 'seeders'
+
