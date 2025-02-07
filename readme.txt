@@ -43,3 +43,19 @@ Połączenie bazy danych z projektem:
 
    4. Możemy usunąć foldery 'migrations' i 'seeders'
 
+   5. W folderze 'models' tworzymy plik Posts.js
+
+	6. W Posts.js piszemy skrypt który tworzy tablice w MySQL.
+
+	7. Modyfikujemy plik index.js w ten sposób żeby sprawdzał czy istnieje tabela Posts w bazie danych, jeśli tej tablicy nie ma to ją utworzy.
+
+	8. Łączymy aplikację z naszą schemą w MySQL:
+Folder config -> plik config.json
+W tym pliku można skonfigurować "username", "password", "database" dla takich środowisk jak "development", "test", "production".
+
+	9. Żeby uruchomić aplikację - wpisujemy w terminal:
+   npm start
+
+
+
+
