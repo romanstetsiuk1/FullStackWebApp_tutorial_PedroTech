@@ -56,6 +56,17 @@ W tym pliku można skonfigurować "username", "password", "database" dla takich 
 	9. Żeby uruchomić aplikację - wpisujemy w terminal:
    npm start
 
+Zrobienie API request:
+	1. W folderze serwera tworzymy folder 'routes' a w nim plik 'Posts.js'
+
+	2. Dla testowania requestów najlepiej używać programu zewnętrznego np..: Postman
+
+
+Budowanie części React w aplikacji:
+	1. W terminalu przechodzimy do folderu 'client' i tworzymy aplikację React:  
+   
+	2. Żeby uruchomić aplikację wpisz w terminale:
+   npm run serve
 
 
 
