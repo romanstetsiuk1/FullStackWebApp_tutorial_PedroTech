@@ -8,11 +8,18 @@ const { Posts } = require("../models");
 // router.get()
 // router.post()
 
-// Ten skrypt wysyla "Hello World;" na adress http://localhost:3001/posts 
-router.get("/", (req, res) => {
-    res.json("Hello World;");       // wysyła w formacie .json
-    // res.send("Hello World;");
+// // Ten skrypt wysyla "Hello World;" na adress http://localhost:3001/posts 
+// router.get("/", (req, res) => {
+//     res.json("Hello World;");       // wysyła w formacie .json
+//     // res.send("Hello World;");
+// });
+
+// Wyswietlamy liste wszystkich postow w formacie JSON w Postmanie
+router.get("/", async (req, res) => {
+    const listOfPosts = await Posts.findAll();
+    res.json(listOfPosts);
 });
+
 router.post("/", async (req, res) => {
     try {
         const post = req.body;
@@ -27,11 +34,6 @@ router.post("/", async (req, res) => {
 router.post("/", async (req, res) => {
     const post = req.body;
 
-    // await Posts.create({
-    //     title: "Testowy post",
-    //     postText: "To jest test",
-    //     userName: "Admin"
-    // });
     await Posts.create(post);
     res.json(post);
 });
