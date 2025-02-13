@@ -5,16 +5,16 @@ module.exports = (Sequelize, DataTypes) => {
     const Posts = Sequelize.define("Posts", {
         title: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         postText: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         userName: {
             type: DataTypes.STRING,
-            allowNull: false
-        },
+            allowNull: true
+        }
     });
     return Posts;
 };
