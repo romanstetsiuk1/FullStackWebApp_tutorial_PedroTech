@@ -1,8 +1,11 @@
 // Zaczynamy budowe polaczenie node.js i express serwer. To jest potrzebne do robienia API requests.
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
+
 // // Rozwiazanie z AI:
 // app.post("/posts", (req, res) => {
 //     try {

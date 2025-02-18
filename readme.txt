@@ -63,10 +63,21 @@ Zrobienie API request:
 
 
 Budowanie części React w aplikacji:
-	1. W terminalu przechodzimy do folderu 'client' i tworzymy aplikację React:  
+	1. W terminalu  tworzymy aplikację React w folderze client:  
+   npx create-react-app client
    
 	2. Żeby uruchomić aplikację wpisz w terminale:
-   npm run serve
+   npm start
+
+	3. Zbędne pliki (App.test.js; index.css; logo.svg; setupTests.js) z katalogu client/src można usunąć
+
+	4. Instalujemy axios - ten dodatek ułatwi nam robienie requestów. Wpisujemy w terminalu:
+   npm install axios
+
+	5. Postronie serwera wpisujemy w terminale:
+   npm install cors
+
+
 
 
 
