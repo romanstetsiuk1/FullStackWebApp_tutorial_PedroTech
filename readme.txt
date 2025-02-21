@@ -76,6 +76,16 @@ Budowanie części React w aplikacji:
 
 	5. Postronie serwera wpisujemy w terminale:
    npm install cors
+   
+	6. W terminalu w lokalizacji client wpisujemy:
+   npm install react-router-dom
+
+	7. W katalogu src tworzymy nowy katalog 'pages'. 
+      W tym folderze tworzymy odpowiedni pliki do struktury naszej strony internetowej np..: Home.js; 
+
+	8. Zainstalowanie wtyczki 'ES7+ React/Redux/React-Native snippets' pozwala na szybkie tworzenie nowego komponentu React -> wystarczy wpisać 'rfce' + Enter
+
+
 
 
 
