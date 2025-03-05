@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Import pliku CSS
+import axios from "axios";
+import { useEffect, useState } from 'react';
 
 function App() {
+
+    const [ListOfPosts, setListOfPosts] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:3001/posts").then((response) => {
+            setListOfPosts(response.data);
+        });
+    },[]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {ListOfPosts.map((value,key) => {
+        return (
+        <div className='post'>
+            <div className='title'>{value.title}</div>
+            <div className='postText'>{value.postText}</div>
+            <div className='userName'>{value.userName}</div>
+        </div>);
+        })}
     </div>
   );
 }

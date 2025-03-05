@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+body {
+    background-color: aliceblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Styl dla kontenera postu */
+.post {
+    background-color: #ffffff; /* Białe tło */
+    border: 1px solid #e0e0e0; /* Szara ramka */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    padding: 16px; /* Wewnętrzny odstęp */
+    margin-bottom: 16px; /* Odstęp między postami */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lekki cień */
+    max-width: 600px; /* Maksymalna szerokość postu */
+    margin-left: auto; /* Wyśrodkowanie postu */
+    margin-right: auto; /* Wyśrodkowanie postu */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Styl dla tytułu postu */
+  .title {
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie */
+    color: #333333; /* Kolor tekstu */
+    margin-bottom: 8px; /* Odstęp od kolejnego elementu */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Styl dla treści postu */
+  .postText {
+    font-size: 16px; /* Rozmiar czcionki */
+    color: #555555; /* Kolor tekstu */
+    line-height: 1.5; /* Wysokość linii */
+    margin-bottom: 12px; /* Odstęp od kolejnego elementu */
   }
-}
+  
+  /* Styl dla nazwy użytkownika */
+  .userName {
+    font-size: 14px; /* Rozmiar czcionki */
+    color: #777777; /* Kolor tekstu */
+    font-style: italic; /* Kursywa */
+    text-align: right; /* Wyrównanie do prawej */
+  }
