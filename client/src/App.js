@@ -9,12 +9,14 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter>
-            <Link to="/" >
+        <nav className="navbar-container">
+            <Link className='navbar' to="/" >
                 Home
             </Link>
-            <Link to="/createPost" >
+            <Link className='navbar' to="/createPost" >
                 Create A Post
             </Link>
+        </nav>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/createPost' element={<CreatePost />} />
