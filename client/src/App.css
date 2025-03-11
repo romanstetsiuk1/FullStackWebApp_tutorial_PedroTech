@@ -1,65 +1,66 @@
 body {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 /* Styl dla kontenera postu */
 .post {
-    background-color: #ffffff; /* Białe tło */
-    border: 1px solid #e0e0e0; /* Szara ramka */
-    border-radius: 8px; /* Zaokrąglone rogi */
-    padding: 16px; /* Wewnętrzny odstęp */
-    margin-bottom: 16px; /* Odstęp między postami */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lekki cień */
-    max-width: 600px; /* Maksymalna szerokość postu */
-    margin-left: auto; /* Wyśrodkowanie postu */
-    margin-right: auto; /* Wyśrodkowanie postu */
-  }
-  
-  /* Styl dla tytułu postu */
-  .title {
-    font-size: 24px; /* Rozmiar czcionki */
-    font-weight: bold; /* Pogrubienie */
-    color: #333333; /* Kolor tekstu */
-    margin-bottom: 8px; /* Odstęp od kolejnego elementu */
-  }
-  
-  /* Styl dla treści postu */
-  .postText {
-    font-size: 16px; /* Rozmiar czcionki */
-    color: #555555; /* Kolor tekstu */
-    line-height: 1.5; /* Wysokość linii */
-    margin-bottom: 12px; /* Odstęp od kolejnego elementu */
-  }
-  
-  /* Styl dla nazwy użytkownika */
-  .userName {
-    font-size: 14px; /* Rozmiar czcionki */
-    color: #777777; /* Kolor tekstu */
-    font-style: italic; /* Kursywa */
-    text-align: right; /* Wyrównanie do prawej */
-  }
+  cursor: pointer;
+  background-color: #ffffff; /* Białe tło */
+  border: 1px solid #e0e0e0; /* Szara ramka */
+  border-radius: 8px; /* Zaokrąglone rogi */
+  padding: 16px; /* Wewnętrzny odstęp */
+  margin-bottom: 16px; /* Odstęp między postami */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lekki cień */
+  max-width: 600px; /* Maksymalna szerokość postu */
+  margin-left: auto; /* Wyśrodkowanie postu */
+  margin-right: auto; /* Wyśrodkowanie postu */
+}
 
-  .navbar-container {
-    display: flex;
-    justify-content: center; /* Centrowanie menu */
-    background: #222; /* Ciemne tło */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Lekki cień */
-  }
-  
-  .navbar {
-    text-decoration: none; /* Usuwa podkreślenie linków */
-    color: white; /* Kolor tekstu */
-    font-size: 18px;
-    padding: 10px 15px; /* Odstępy wewnętrzne */
-    margin: 0 10px; /* Odstępy między linkami */
-    border-radius: 5px; /* Zaokrąglone rogi */
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .navbar:hover {
-    background: rgba(255, 255, 255, 0.2); /* Efekt po najechaniu */
-  }
+/* Styl dla tytułu postu */
+.title {
+  font-size: 24px; /* Rozmiar czcionki */
+  font-weight: bold; /* Pogrubienie */
+  color: #333333; /* Kolor tekstu */
+  margin-bottom: 8px; /* Odstęp od kolejnego elementu */
+}
+
+/* Styl dla treści postu */
+.postText {
+  font-size: 16px; /* Rozmiar czcionki */
+  color: #555555; /* Kolor tekstu */
+  line-height: 1.5; /* Wysokość linii */
+  margin-bottom: 12px; /* Odstęp od kolejnego elementu */
+}
+
+/* Styl dla nazwy użytkownika */
+.userName {
+  font-size: 14px; /* Rozmiar czcionki */
+  color: #777777; /* Kolor tekstu */
+  font-style: italic; /* Kursywa */
+  text-align: right; /* Wyrównanie do prawej */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center; /* Centrowanie menu */
+  background: #222; /* Ciemne tło */
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Lekki cień */
+}
+
+.navbar {
+  text-decoration: none; /* Usuwa podkreślenie linków */
+  color: white; /* Kolor tekstu */
+  font-size: 18px;
+  padding: 10px 15px; /* Odstępy wewnętrzne */
+  margin: 0 10px; /* Odstępy między linkami */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.2); /* Efekt po najechaniu */
+}
 
 
   /* Ciemne tło */
@@ -217,4 +218,67 @@ button:active {
   transform: scale(0.95);
 }
 
-/* Home.js */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Strona po kliknięciu w post */
+/* Kontener całej strony posta */
+.postPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px; /* odstęp między lewą a prawą stroną */
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Lewa strona - treść posta */
+.leftSide {
+  flex: 2;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tytuł posta */
+.leftSide .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+/* Treść posta */
+.leftSide .postText {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Footer z nazwą użytkownika */
+.leftSide .footer {
+  font-size: 14px;
+  color: #777777;
+  font-style: italic;
+  text-align: right;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+/* Prawa strona - sekcja komentarzy */
+.rightSide {
+  flex: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-width: 250px;
+  max-height: fit-content;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+

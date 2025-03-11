@@ -2,8 +2,11 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 function CreatePost() {
+
+  let navigate = useNavigate();
 
   const initialValues = {
     title: "",
@@ -13,7 +16,8 @@ function CreatePost() {
 
   const onSubmit = (data) => {
     axios.post("http://localhost:3001/posts", data).then((response) => {
-      console.log("Rekord w BD zapisany :)")
+      // console.log("Rekord w BD zapisany :)")
+      navigate("/");
   });
   };
 
@@ -22,6 +26,7 @@ function CreatePost() {
     postText: Yup.string().required(),
     userName: Yup.string().min(3).max(15).required()
   });
+
 
   return (
     <div className='createPostPage'>

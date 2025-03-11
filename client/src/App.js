@@ -3,6 +3,7 @@ import './App.css'; // Import pliku CSS
 import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
 import Home from './pages/Home.js';
 import CreatePost from './pages/CreatePost.js';
+import Post from './pages/Post.js';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/createPost' element={<CreatePost />} />
+                <Route path='/post/:id' element={<Post />} />
             </Routes>
         </BrowserRouter>
     </div>
