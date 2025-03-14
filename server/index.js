@@ -27,6 +27,8 @@ const db = require("./models");
 // Routers
 const postRouter = require('./routes/Posts');
 app.use("/posts", postRouter);
+const commentsRouter = require('./routes/Comments');
+app.use("/comments", commentsRouter);
 
 
 // Start API na odpowiednim porcie (ma sie roznic od portu na ktorym inicujemy aplikacje React)
