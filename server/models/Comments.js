@@ -5,8 +5,16 @@ module.exports = (Sequelize, DataTypes) => {
     const Comments = Sequelize.define("Comments", {
         commentBody: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
         }
     });
+
+    Comments.associate = (models) => {
+        Comments.belongsTo(models.Posts, {
+          foreignKey: "PostId",
+          onDelete: "CASCADE",
+        });
+      };
+      
     return Comments;
 };

@@ -281,4 +281,52 @@ button:active {
   max-height: fit-content;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Sekcja komentarze */
+.commentSection {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.commentSection h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.addComment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.addComment input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.addComment button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addComment button:hover {
+  background-color: #1565c0;
+}
+
+.listOfComments .comment {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
 
